@@ -10,8 +10,6 @@ public class Solution {
         int smallIdx = nums.Length - k;
         return quickSelect(nums, smallIdx, 0, nums.Length-1);
     }
-    
-
         
     private static int quickSelect(int[] nums, int k, int left, int right)
     {
@@ -46,7 +44,6 @@ public class Solution {
         swap(nums, first, right);
         return right;
     }
-
 
     private static void swap(int[] nums, int left, int right)
     {
