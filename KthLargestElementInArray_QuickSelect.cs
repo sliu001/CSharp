@@ -1,8 +1,13 @@
 /*
-LC215
+LC215. Kth Largest Element in an Array
+Given an integer array nums and an integer k, return the kth largest element in the array.
+
 Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
 Output: 4
+
+--Quick Select + convert to Getting the (nums.Length - k)th samllest number
 */
+
 public class Solution {
     public int FindKthLargest(int[] nums, int k) {
         if (nums.Length==1 && k==1) return nums[0];
