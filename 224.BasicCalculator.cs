@@ -1,4 +1,13 @@
 //LC224
+/*
+s consists of digits, '+', '-', '(', ')', and ' '
+'+' is not used as a unary operation.
+'-' could be used as a unary operation but it has to be inside parentheses.
+There will be no two consecutive operators in the input.
+
+Input: s = "(1+(4+5+2)-3)+(6+8)"
+Output: 23
+*/
 public class Solution {
     public int Calculate(string s) {        
         Stack<int> signs = new Stack<int>();
