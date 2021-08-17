@@ -1,5 +1,12 @@
 /*
 LC987 https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+Input: root = [3,9,20,null,null,15,7]
+Output: [[9],[3,15],[20],[7]]
+Explanation:
+Column -1: Only node 9 is in this column.
+Column 0: Nodes 3 and 15 are in this column in that order from top to bottom.
+Column 1: Only node 20 is in this column.
+Column 2: Only node 7 is in this column.
 
 */
 /**
@@ -15,6 +22,7 @@ LC987 https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
  *     }
  * }
  */
+ 
 public class Solution {
     public IList<IList<int>> VerticalTraversal(TreeNode root) {
         
