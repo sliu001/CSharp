@@ -10,7 +10,7 @@ public class Solution {
     public int LengthOfLIS(int[] nums) {
         var lenList = new List<int>(){nums[0]};
 
-        for (int i=0; i<nums.Length; i++)
+        for (int i=1; i<nums.Length; i++)
         {
             if (nums[i] > lenList[lenList.Count - 1])
                 lenList.Add(nums[i]);
