@@ -1,4 +1,7 @@
 //LC227
+/*
+s consists of integers and operators ('+', '-', '*', '/') separated by some number of spaces.
+*/
 public class Solution {
     public int Calculate(string s) {
         
