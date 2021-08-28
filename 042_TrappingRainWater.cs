@@ -15,18 +15,18 @@ public class Solution {
         
         int[] leftMaxArr = new int[height.Length];
         int[] rightMaxArr = new int[height.Length];
-        leftMaxArr[0] = 0;
-        rightMaxArr[height.Length-1] = 0;
+        leftMaxArr[0] = height[0];
+        rightMaxArr[height.Length-1] = height[height.Length-1];
         
         for (int i=1; i<height.Length; i++)
         {            
-            leftMaxArr[i] = Math.Max(leftMaxArr[i-1], height[i-1]);                        
-            rightMaxArr[height.Length - i - 1] = Math.Max(rightMaxArr[height.Length - i], height[height.Length - i]);
+            leftMaxArr[i] = Math.Max(leftMaxArr[i-1], height[i]);                        
+            rightMaxArr[height.Length - i - 1] = Math.Max(rightMaxArr[height.Length - i], height[height.Length - i - 1]);
         }
         
         for (int i=0; i<height.Length; i++)
         {
-            result += Math.Max(Math.Min(leftMaxArr[i], rightMaxArr[i]) - height[i], 0);
+            result += Math.Min(leftMaxArr[i], rightMaxArr[i]) - height[i];
         }
         
         return result;
